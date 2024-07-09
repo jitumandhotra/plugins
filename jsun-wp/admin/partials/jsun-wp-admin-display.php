@@ -1,15 +1,4 @@
-<style>
-    .tab-content {
-	  display: none;
-	}
-
-	#home-tab-sec > .tab-content:first-of-type {
-	  display: block;
-	}
-
-</style>
-
-<div id="home-tab-sec" class="wrap">
+<div id="jsun-home-tab-sec" class="wrap">
     <h1>Jsun WP Plugin Admin</h1>
     <h2 class="nav-tab-wrapper">
         <a href="#tab1" class="nav-tab nav-tab-active">REST API Paths</a>
@@ -19,6 +8,7 @@
         <h2>REST API Paths</h2>
         <ul>
             <?php 
+            $plugin_routes = get_option('jsun_wp_plugin_routes', array());
             $base_url = home_url('/wp-json/' . $this->plugin_name . '/v1');
             foreach ($plugin_routes as $route): 
                 $full_path = esc_url($base_url . $route['path']);

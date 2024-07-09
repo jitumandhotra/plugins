@@ -1,4 +1,2 @@
-/**
- * All of the CSS for your admin-specific functionality should be
- * included in this file.
- */
+#jsun-home-tab-sec .tab-content { display: none;}
+#jsun-home-tab-sec > .tab-content:first-of-type {display: block;}

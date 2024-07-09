@@ -20,17 +20,16 @@ class Jsun_Wp_Admin {
 
 	public function add_admin_menu() {
         add_menu_page(
-            'WP Json', // Page title
-            'Wp Json',        // Menu title
-            'manage_options',        // Capability
-            'jsun_wp_all',        // Menu slug
-            array($this, 'display_routes_page'), // Callback function
-            'dashicons-admin-generic' // Icon URL
+            'WP Json',
+            'Wp Json',        
+            'manage_options',
+            'jsun_wp_all',
+            array($this, 'display_routes_page'),
+            'dashicons-rest-api'
         );
     }
     
-    public function display_routes_page() {
-        $plugin_routes = get_option('jsun_wp_plugin_routes', array());
+    public function display_routes_page() {        
         require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/partials/jsun-wp-admin-display.php';
         exit();        
     }
