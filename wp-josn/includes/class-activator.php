@@ -29,7 +29,7 @@ class WpJson_Activator {
 			published_year int(4) NOT NULL,
 			rating float DEFAULT 0,
 			PRIMARY KEY  (id),
-			INDEX (author_id)
+			KEY idx_author_id (author_id)
 		) $charset_collate;
 		";
 
